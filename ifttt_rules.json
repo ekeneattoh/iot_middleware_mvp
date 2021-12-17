@@ -1,0 +1,255 @@
+{
+  "data": {
+    "me": {
+      "login": "imamusiccollective",
+      "email": "imamusiccollective@gmail.com",
+      "id": "24809612",
+      "profile_image_url": null,
+      "profile_username": null,
+      "timezone": "Brussels",
+      "bio": null,
+      "website": null,
+      "created_at": "2021-02-21 02:40:25 -0800",
+      "organizations": [
+        {
+          "name": "eattoh-phd",
+          "channels": [
+            {
+              "module_name": "eattoh_middleware",
+              "name": "eattoh-phd"
+            }
+          ]
+        }
+      ],
+      "devices": [
+
+      ]
+    },
+    "live_channels": [
+      {
+        "user_name_field": "Ima Chi",
+        "user_id_field": "117724663814674368707",
+        "created_at": "2021-02-21 02:42:08 -0800",
+        "offline": false,
+        "channel": {
+          "module_name": "google_docs",
+          "name": "Google Docs"
+        }
+      },
+      {
+        "user_name_field": "imamusiccollective",
+        "user_id_field": null,
+        "created_at": "2021-02-21 02:42:23 -0800",
+        "offline": false,
+        "channel": {
+          "module_name": "mocker",
+          "name": "Mocker"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2021-02-21 02:46:48 -0800",
+        "offline": false,
+        "channel": {
+          "module_name": "email",
+          "name": "Email"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2021-10-31 09:29:31 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "eattoh_middleware",
+          "name": "eattoh-phd"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2021-10-31 09:30:00 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "date_and_time",
+          "name": "Date & Time"
+        }
+      },
+      {
+        "user_name_field": "imamusiccollective",
+        "user_id_field": "mrNVU5Wz-22Q4bnBbYOvLDiZgpZCq6ehx64EPxvoazI",
+        "created_at": "2021-10-31 09:30:06 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "maker_webhooks",
+          "name": "Webhooks"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2021-11-01 03:34:50 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "weather",
+          "name": "Weather Underground"
+        }
+      },
+      {
+        "user_name_field": "imamusiccollective@gmail.com",
+        "user_id_field": null,
+        "created_at": "2021-11-28 05:52:50 -0800",
+        "offline": false,
+        "channel": {
+          "module_name": "gmail",
+          "name": "Gmail"
+        }
+      }
+    ],
+    "live_applets": [
+      {
+        "created_at": "2021-11-01 03:20:37 -0700",
+        "applet": {
+          "normalized_applet": {
+            "id": "AusiteK5",
+            "name": "If New document in your folder, then Send me an email at imamusiccollective@gmail.com",
+            "description": "",
+            "status": "disabled_for_user",
+            "created_at": "2021-11-01 03:20:37 -0700",
+            "is_tombstoned": false
+          }
+        },
+        "live_applet_trigger": {
+          "channel_module_name": "google_docs",
+          "module_name": "new_document",
+          "live_fields": [
+
+          ]
+        },
+        "live_applet_actions": [
+          {
+            "channel_module_name": "email",
+            "module_name": "send_me_email",
+            "live_fields": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "created_at": "2021-11-28 04:08:52 -0800",
+        "applet": {
+          "normalized_applet": {
+            "id": "UQwzhPRj",
+            "name": "lock_front_door",
+            "description": "smart door lock",
+            "status": "enabled_for_user",
+            "created_at": "2021-11-28 04:08:52 -0800",
+            "is_tombstoned": false
+          }
+        },
+        "live_applet_trigger": {
+          "channel_module_name": "date_and_time",
+          "module_name": "every_day_at",
+          "live_fields": [
+            {
+              "name": "time",
+              "value_json": "\"20:00\""
+            }
+          ]
+        },
+        "live_applet_actions": [
+          {
+            "channel_module_name": "maker_webhooks",
+            "module_name": "make_web_request",
+            "live_fields": [
+              {
+                "name": "url",
+                "value_json": "\"https://phd-iot-simulator.azurewebsites.net/api/smart_door_lock_home?command=on\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "created_at": "2021-11-28 04:09:17 -0800",
+        "applet": {
+          "normalized_applet": {
+            "id": "X7vhtrLy",
+            "name": "go_to_bed",
+            "description": "smart light",
+            "status": "enabled_for_user",
+            "created_at": "2021-11-28 04:09:17 -0800",
+            "is_tombstoned": false
+          }
+        },
+        "live_applet_trigger": {
+          "channel_module_name": "date_and_time",
+          "module_name": "every_day_at",
+          "live_fields": [
+            {
+              "name": "time",
+              "value_json": "\"21:00\""
+            }
+          ]
+        },
+        "live_applet_actions": [
+          {
+            "channel_module_name": "maker_webhooks",
+            "module_name": "make_web_request",
+            "live_fields": [
+              {
+                "name": "url",
+                "value_json": "\"https://phd-iot-simulator.azurewebsites.net/api/smart_light_home?command=on\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "created_at": "2021-11-28 05:58:17 -0800",
+        "applet": {
+          "normalized_applet": {
+            "id": "H2JdyK4s",
+            "name": "take_umbrella",
+            "description": "weather",
+            "status": "enabled_for_user",
+            "created_at": "2021-11-28 05:58:17 -0800",
+            "is_tombstoned": false
+          }
+        },
+        "live_applet_trigger": {
+          "channel_module_name": "weather",
+          "module_name": "tomorrows_forecast_calls_for",
+          "live_fields": [
+            {
+              "name": "condition",
+              "value_json": "\"rain\""
+            },
+            {
+              "name": "location",
+              "value_json": "{\"latitude\":\"50.8503396\",\"longitude\":\"4.3517103\",\"address\":\"bruxelles\",\"description\":\"bruxelles\",\"zoom\":\"16\"}"
+            }
+          ]
+        },
+        "live_applet_actions": [
+          {
+            "channel_module_name": "gmail",
+            "module_name": "send_yourself_an_email",
+            "live_fields": [
+              {
+                "name": "subject",
+                "value_json": "\"Rain tomorrow! \""
+              },
+              {
+                "name": "body",
+                "value_json": "\"Take an umbrella, it's going to rain!!!\""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

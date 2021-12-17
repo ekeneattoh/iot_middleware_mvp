@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "key": "person",
+    "data": {
+        "items": [
+            {
+                "name": "Ekene Attoh",
+                "user_id": "17c43d06b4364ce58b31c54bfb13ebd0",
+                "device_trackers": [],
+                "id": "ekene_attoh"
+            }
+        ]
+    }
+}

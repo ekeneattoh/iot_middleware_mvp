@@ -1,0 +1,22 @@
+- id: '1636220900045'
+  alias: trigger_home_light_webhook
+  description: Trigger Azure Function Home Light
+  trigger:
+  - platform: time
+    at: '19:30'
+  condition: []
+  action:
+  - service: rest_command.led_simulator_home
+  mode: single
+- id: '1636293087430'
+  alias: trigger_office_light_webhook
+  description: Trigger Azure Function Office Light
+  trigger:
+  - platform: geo_location
+    source: ''
+    zone: zone.home
+    event: leave
+  condition: []
+  action:
+  - service: rest_command.led_simulator_work
+  mode: single

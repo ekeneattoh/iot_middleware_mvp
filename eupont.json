@@ -1,0 +1,3171 @@
+{
+  "RDF": {
+    "Ontology": {
+      "imports": "",
+      "versionInfo": 2,
+      "title": "EUPont: an ontology for End User Programming of the IoT",
+      "license": "Copyright (c) 2016-2018 Monge Roffarello Alberto Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License",
+      "rights": "Copyright(c) 2016-2018 Monge Roffarello Alberto",
+      "contributor": "Luigi De Russis (luigi.derussis@polito.it)",
+      "preferredNamespacePrefix": "eupont",
+      "creator": "Monge Roffarello Alberto (alberto.monge@polito.it)",
+      "issued": "2016-12-01",
+      "primaryTopic": "End User Programming in the Internet of Thing",
+      "description": "EUPont is an ontology to model high level rules for Internet of Things End User Programming (IoT-EUP).",
+      "preferredNamespaceUri": "http://elite.polito.it/ontologies/eupont.owl#",
+      "modified": "2018-02-09"
+    },
+    "ObjectProperty": [
+      {
+        "domain": "",
+        "range": {
+          "Class": {
+            "unionOf": {
+              "Description": [
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "label": "allowTo"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "canControl"
+      },
+      {
+        "inverseOf": "",
+        "label": "channelOffer"
+      },
+      {
+        "subPropertyOf": "",
+        "domain": "",
+        "range": "",
+        "label": "commandAllowTo"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasAction"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasCategory"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasCommand"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasDetail"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasNotification"
+      },
+      {
+        "inverseOf": "",
+        "label": "hasRegisteredEntity"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasService"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasTechnology"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "hasTrigger"
+      },
+      {
+        "label": "isOfChannel"
+      },
+      {
+        "equivalentProperty": "",
+        "label": "location"
+      },
+      {
+        "domain": "",
+        "range": {
+          "Class": {
+            "unionOf": {
+              "Description": [
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "label": "nominal"
+      },
+      {
+        "subPropertyOf": "",
+        "domain": "",
+        "range": "",
+        "label": "nominalAction"
+      },
+      {
+        "subPropertyOf": "",
+        "range": "",
+        "label": "nominalDetail"
+      },
+      {
+        "subPropertyOf": "",
+        "domain": "",
+        "range": "",
+        "label": "nominalTrigger"
+      },
+      {
+        "subPropertyOf": "",
+        "domain": "",
+        "range": "",
+        "label": "notificationAllowTo"
+      },
+      {
+        "subPropertyOf": "",
+        "domain": "",
+        "range": "",
+        "label": "offerAction"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "offerDetail"
+      },
+      {
+        "subPropertyOf": "",
+        "domain": "",
+        "range": "",
+        "label": "offerTrigger"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "label": "triggers"
+      },
+      {
+        "domain": {
+          "Class": {
+            "unionOf": {
+              "Description": [
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "range": "",
+        "label": "where"
+      },
+      {
+        "domain": {
+          "Class": {
+            "unionOf": {
+              "Description": [
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "range": "",
+        "label": "which"
+      },
+      {
+        "domain": {
+          "Class": {
+            "unionOf": {
+              "Description": [
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "range": "",
+        "label": "who"
+      }
+    ],
+    "Description": [
+      "",
+      {
+        "comment": "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.",
+        "isDefinedBy": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+      },
+      "",
+      {
+        "subClassOf": ""
+      },
+      {
+        "label": "Agent",
+        "comment": "An agent (eg. person, group, software or physical artifact)."
+      },
+      {
+        "label": "Document"
+      },
+      {
+        "label": "Image"
+      },
+      {
+        "label": "Person"
+      },
+      {
+        "label": "Person"
+      },
+      {
+        "type": "",
+        "members": {
+          "Description": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      {
+        "type": "",
+        "members": {
+          "Description": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      }
+    ],
+    "DatatypeProperty": [
+      {
+        "domain": "",
+        "range": "",
+        "comment": "description"
+      },
+      {
+        "domain": {
+          "Class": {
+            "unionOf": {
+              "Description": [
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "range": "",
+        "comment": "detail"
+      },
+      {
+        "domain": "",
+        "range": "",
+        "comment": "type"
+      },
+      {
+        "comment": "value"
+      }
+    ],
+    "Class": [
+      {
+        "subClassOf": "",
+        "label": "AcceptCommunicationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "Action"
+      },
+      {
+        "subClassOf": "",
+        "label": "ActivateEnvironmentSceneAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ActivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ActivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddAlarmAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddCalendarItemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddRemindAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddReminderAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddTimerAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddedAlarmTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddedCalendarItemTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddedRemindTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddedReminderTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "AddedTimerTrigger"
+      },
+      {
+        "equivalentClass": "",
+        "comment": "An agent (eg. person, group, software or physical artifact).",
+        "label": "Agent"
+      },
+      {
+        "subClassOf": "",
+        "label": "AirConditioner"
+      },
+      {
+        "subClassOf": "",
+        "label": "AirMonitor"
+      },
+      {
+        "subClassOf": "",
+        "label": "AirPressureService"
+      },
+      {
+        "subClassOf": "",
+        "label": "AirPurifier"
+      },
+      {
+        "subClassOf": "",
+        "label": "AirPurifierDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "AirPurifierEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "AirPurifierService"
+      },
+      {
+        "subClassOf": "",
+        "label": "AlarmClockService"
+      },
+      {
+        "subClassOf": "",
+        "label": "AnswerCallAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "AntiIntrusionSystem"
+      },
+      {
+        "subClassOf": "",
+        "label": "Appliance"
+      },
+      {
+        "subClassOf": "",
+        "label": "ApplianceService"
+      },
+      {
+        "subClassOf": "",
+        "label": "ArriveOnVehicleTrigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "AttachementService"
+      },
+      {
+        "subClassOf": "",
+        "label": "AudioRecordingService"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "AudioService"
+      },
+      {
+        "subClassOf": "",
+        "label": "BatteryService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Beacon"
+      },
+      {
+        "subClassOf": "",
+        "label": "BikeTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "BlockCallAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "Blog"
+      },
+      {
+        "subClassOf": "",
+        "label": "BluetoothService"
+      },
+      {
+        "subClassOf": "",
+        "label": "BrightnessDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "BrightnessIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Building"
+      },
+      {
+        "subClassOf": "",
+        "label": "BuyCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "CalendarService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Calendar"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "CallService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Call"
+      },
+      {
+        "subClassOf": "",
+        "label": "Camera"
+      },
+      {
+        "label": "Category"
+      },
+      {
+        "label": "Channel"
+      },
+      {
+        "subClassOf": "",
+        "label": "Chat"
+      },
+      {
+        "subClassOf": "",
+        "label": "CloseCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "CloseNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "CloseSafetyValveAction"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "CloseWindowFrameAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "CloudPlatform"
+      },
+      {
+        "subClassOf": "",
+        "label": "CodeHostingPlatform"
+      },
+      {
+        "subClassOf": "",
+        "label": "CoffeeMaker"
+      },
+      {
+        "subClassOf": "",
+        "label": "CoffeeService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Colleague"
+      },
+      {
+        "label": "Command"
+      },
+      {
+        "subClassOf": "",
+        "label": "CommentService"
+      },
+      {
+        "subClassOf": "",
+        "label": "CommunicationService"
+      },
+      {
+        "subClassOf": "",
+        "label": "CommunicationTool"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectDeviceAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectToDeviceAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectToNetworkAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectToWebServiceAction"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "ConnectedVehicle"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectionToDeviceTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectionToNetworkTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Console"
+      },
+      {
+        "subClassOf": "",
+        "label": "ContactService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Cooker"
+      },
+      {
+        "subClassOf": "",
+        "label": "CoolingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "CoolingSystemDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "CoolingSystemEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DIYElectronic"
+      },
+      {
+        "subClassOf": "",
+        "label": "DangerousActivityDetectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DangerousActivityTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseAirQualityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseEnvironmentConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseHumidityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseLightingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseNoiseAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseSecurityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseTemperatureAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseUserConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreaseVolumeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedAirPressureTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedAirQualityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedHealthConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedHumidityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedLightingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedNoiseLevelTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedSecurityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedTemperatureTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DecreasedWeatherConditionsTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Dehumidifier"
+      },
+      {
+        "subClassOf": "",
+        "label": "DehumidifierService"
+      },
+      {
+        "subClassOf": "",
+        "label": "DehumidifierSystemDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DehumidifierSystemEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteAlarmAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteCalendarItemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteContactAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteFileAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteFromStorageAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteHealthInformationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteMediaInformationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteRemindAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteReminderAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteTimerAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeleteWebBookmarkAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedAlarmTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedAppTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedCalendarItemTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedContactTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedFileTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedFromStorageTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedHealthInformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedMediaInformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedRemindTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedReminderTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedTimerTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeletedWebBookmarkTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Detail"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeveloperTool"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceConnectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceConnectivityDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceConnectivityEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceDisconnectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceFailureTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceLeakTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DevicePluggedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceSavingModeDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceSavingModeEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceService"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceTurnedOffTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceTurnedOnTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceUnpluggedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DeviceUsageWarningTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableAirPurifierSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableAirplaneModeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableBluetoothConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableCoolingSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableDehumidifierSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableDeviceConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableDeviceSavingModeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableGPSAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableHeatingSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableHumidifierSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableInternetConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableLightingSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableNFCConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableNightModeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableNotificationsAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableScreenRotationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableSecuritySystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisableWateringSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisabledAirplaneModeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisabledBluetoothConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisabledGPSTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisabledInternetConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisabledNFCConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisconnectCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisconnectDeviceAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisconnectFromDeviceAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisconnectFromNetworkAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisconnectNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisconnectedFromDeviceTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisconnectedFromNetworkTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Dishwasher"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisplayService"
+      },
+      {
+        "subClassOf": "",
+        "label": "DisplayService"
+      },
+      {
+        "subClassOf": "",
+        "label": "DiswashingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Dryer"
+      },
+      {
+        "subClassOf": "",
+        "label": "DryingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "DVDPlayer"
+      },
+      {
+        "subClassOf": "",
+        "label": "EUDPlatform"
+      },
+      {
+        "subClassOf": "",
+        "label": "EcommerceService"
+      },
+      {
+        "subClassOf": "",
+        "label": "ECommerceWebsite"
+      },
+      {
+        "subClassOf": "",
+        "label": "EMail"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableAirPurifierSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableAirplaneModeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableBluetoothConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableCoolingSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableDehumidifierSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableDeviceConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableDeviceSavingModeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableGPSAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableHeatingSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableHumidifierSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableInternetConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableLightingSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableNGFCConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableNightModeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableNotificationsAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableScreenRotationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableSecuritySystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableSpeakerphoneAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnableWateringSystemAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnabledAirplaneModeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnabledBluetoothConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnabledGPSTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnabledInternetConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnabledNFCConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EndCallAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnhancedConnectivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnterNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnterTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnvironmentAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnvironmentConditionDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnvironmentConditionIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EnvironmentTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EveryDayTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EveryHourTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EveryMonthTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EveryTimeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EveryWeekTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "EveryYearTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ExitNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "ExitTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "FailureDetectionService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Family"
+      },
+      {
+        "subClassOf": "",
+        "label": "Fax"
+      },
+      {
+        "subClassOf": "",
+        "label": "FileService"
+      },
+      {
+        "subClassOf": "",
+        "label": "FocusTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "FrameService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Fridge"
+      },
+      {
+        "subClassOf": "",
+        "label": "Friend"
+      },
+      {
+        "subClassOf": "",
+        "label": "GPSEnterAreaTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "GPSExitAreaTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "GPSService"
+      },
+      {
+        "subClassOf": "",
+        "label": "GameService"
+      },
+      {
+        "subClassOf": "",
+        "label": "GeographicalArea"
+      },
+      {
+        "subClassOf": "",
+        "label": "GetAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "GroceryShoppingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "HealthInformationService"
+      },
+      {
+        "subClassOf": "",
+        "label": "HealthTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "HealthyActivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "HealthyGoalNotReachedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "HealthyGoalReachedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Heater"
+      },
+      {
+        "subClassOf": "",
+        "label": "HeatingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "HeatingSystemDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "HeatingSystemEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "HiFi"
+      },
+      {
+        "subClassOf": "",
+        "label": "HighSensedDeviceConsumptionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Hub"
+      },
+      {
+        "subClassOf": "",
+        "label": "Humidifier"
+      },
+      {
+        "subClassOf": "",
+        "label": "HumidifierService"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "HumiditySetToTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImproveConsumptionConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImproveDeviceConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImproveLightingConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImproveUsabilityConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImprovedConsumptionConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImprovedDeviceConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImprovedHealthyParameterTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImprovedLightingConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ImprovedUsabilityConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseAirQualityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseEnvironmentConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseHumidityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseLightingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseSecurityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseTemperatureAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseUserConnectivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreaseVolumeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedAirPressureTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedAirQualityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedHealthConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedHumidityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedLightingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedNoiseLevelTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedSecurityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedTemperatureTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "IncreasedWeatherConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "InformationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "InformationService"
+      },
+      {
+        "subClassOf": "",
+        "label": "InformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "InformationWebsite"
+      },
+      {
+        "subClassOf": [
+          "",
+          {
+            "Restriction": {
+              "onProperty": "",
+              "qualifiedCardinality": 1,
+              "onClass": ""
+            }
+          }
+        ],
+        "label": "InstantiatedAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "InstantiatedDetail"
+      },
+      {
+        "subClassOf": [
+          "",
+          {
+            "Restriction": {
+              "onProperty": "",
+              "qualifiedCardinality": 1,
+              "onClass": ""
+            }
+          }
+        ],
+        "label": "InstantiatedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "InteractionService"
+      },
+      {
+        "subClassOf": {
+          "Restriction": {
+            "onProperty": "",
+            "someValuesFrom": ""
+          }
+        },
+        "label": "IoTEntity"
+      },
+      {
+        "subClassOf": "",
+        "label": "Lamp"
+      },
+      {
+        "subClassOf": "",
+        "label": "Laptop"
+      },
+      {
+        "subClassOf": "",
+        "label": "LeakDetectionService"
+      },
+      {
+        "subClassOf": "",
+        "label": "LightingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "LightingSystemDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "LightingSystemEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "LikeService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Location"
+      },
+      {
+        "subClassOf": "",
+        "label": "LowPowerTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "MeasureAboveThresholdNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "MeasureAvailableNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "MeasureBelowThresholdNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "MediaInformationService"
+      },
+      {
+        "subClassOf": "",
+        "label": "MediaService"
+      },
+      {
+        "subClassOf": "",
+        "label": "MediaTool"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "MessageService"
+      },
+      {
+        "subClassOf": "",
+        "label": "MobileDevice"
+      },
+      {
+        "subClassOf": "",
+        "label": "MoveAppAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "MoveOnVehicleTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "MovingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "MusicPlatform"
+      },
+      {
+        "subClassOf": "",
+        "label": "MusicService"
+      },
+      {
+        "subClassOf": "",
+        "label": "MuteCallAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "NFCService"
+      },
+      {
+        "subClassOf": "",
+        "label": "NetworkService"
+      },
+      {
+        "subClassOf": "",
+        "label": "NewCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "NewNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "NewsService"
+      },
+      {
+        "subClassOf": "",
+        "label": "NewsTool"
+      },
+      {
+        "subClassOf": "",
+        "label": "NewsWebsite"
+      },
+      {
+        "subClassOf": "",
+        "label": "NightModeDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "NightModeEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "NoiseService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Notes"
+      },
+      {
+        "label": "Notification"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "NotificationProfileSetToTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "NotificationService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Notification"
+      },
+      {
+        "subClassOf": "",
+        "label": "NotificationsDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "NotificationsEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "OpenCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "OpenNotification"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "OpenWindowFrameAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "OrganizerTool"
+      },
+      {
+        "subClassOf": "",
+        "label": "OutputService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Oven"
+      },
+      {
+        "subClassOf": "",
+        "label": "OvenService"
+      },
+      {
+        "subClassOf": "",
+        "label": "PC"
+      },
+      {
+        "subClassOf": "",
+        "label": "Phone"
+      },
+      {
+        "subClassOf": "",
+        "label": "PhoneCallMutedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "PhoneCallRejectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "PhotoPlatform"
+      },
+      {
+        "subClassOf": "",
+        "label": "PhotoRecordingService"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "disjointWith": "",
+        "label": "PhysicalObject"
+      },
+      {
+        "subClassOf": "",
+        "label": "PlacesTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "PositionRegistrationService"
+      },
+      {
+        "subClassOf": "",
+        "label": "PositionRegistrationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "PostService"
+      },
+      {
+        "subClassOf": "",
+        "label": "PositioningService"
+      },
+      {
+        "subClassOf": "",
+        "label": "PowerService"
+      },
+      {
+        "subClassOf": "",
+        "label": "PresenceDetectedNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "PresenceNoLongerDetectedNotification"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "PrintService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Printer"
+      },
+      {
+        "subClassOf": "",
+        "label": "ProfileUpdateService"
+      },
+      {
+        "subClassOf": "",
+        "label": "QuestionService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Radio"
+      },
+      {
+        "subClassOf": "",
+        "label": "RainfallMeasurementAvailableTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceiveNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedAnswerTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedAppNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedAttachmentTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedBreakingNewsTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedCommentTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedContactNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedDocumentInfoNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedFromDeviceTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedFromDiyTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedIncomingCallTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedLikeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedMessageTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedMissedCallNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedNewsTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedPaymentNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedPostTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedPrivateInformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedRecommendationNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedRemindNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedShippingNotificationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedTagTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReceivedUnlikeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "RecordCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "RecordNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "RecordingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "RejectCallAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ReminderService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Room"
+      },
+      {
+        "subClassOf": [
+          "",
+          {
+            "Restriction": {
+              "onProperty": "",
+              "someValuesFrom": ""
+            }
+          },
+          {
+            "Restriction": {
+              "onProperty": "",
+              "someValuesFrom": ""
+            }
+          }
+        ],
+        "label": "Rule"
+      },
+      {
+        "label": "RuleAxiom"
+      },
+      {
+        "subClassOf": "",
+        "label": "RuleInstantiatedAxiom"
+      },
+      {
+        "subClassOf": "",
+        "label": "RuleNominalAxiom"
+      },
+      {
+        "subClassOf": "",
+        "label": "RunTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "SMS"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveContactAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveFileAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveHealthInformationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveMediaInformationAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "SaveWebBookmarkAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SavedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ScanBluetoothTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ScanWifiTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ScreenRotationDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ScreenRotationEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SecurityService"
+      },
+      {
+        "subClassOf": "",
+        "label": "SecurityShutdownAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SecuritySystemDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedListeningMusicTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendAttachmentAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendCallAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendMessageAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendQuestionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendRequestAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendToDeviceAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendToDisplayAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendToDiyAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendToPersonAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendToPrintAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendToSpeakerAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SendWebRequestAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedAirPressureDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedAirPressureIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedAirQualityDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedAirQualityIncreasedTrigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "SensedHealthyParameterTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedHumididtyDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedHumidityIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedLightingDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedLightingIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedNoiseLevelDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedNoiseLevelIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedRainDetectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedRainNoLongerDetectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedTemperatureDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedTemperatureIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedWindDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensedWindIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensorPresenceDetectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SensorPresenceNoLongerDetectedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentMessageTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentOutcomingCallTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentPrivateInformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentPullTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentQuestionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentRequestTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentSharedInformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentSubscriptionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SentTrigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          {
+            "Restriction": {
+              "onProperty": "",
+              "someValuesFrom": ""
+            }
+          },
+          {
+            "Restriction": {
+              "onProperty": "",
+              "someValuesFrom": ""
+            }
+          }
+        ],
+        "label": "Service"
+      },
+      {
+        "subClassOf": "",
+        "label": "SetBrightnessAction"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "SetEnvironmentComfortAction"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "SetHumidityAction"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "SetLightingAction"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "SetTemperatureAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SetToCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "SetToNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareCommentAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareFileAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareLikeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "SharePostAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareProfileUpdateAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareTagAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShareUnlikeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "SharedCommentTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SharedLikeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SharedPostTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SharedProfileUpdateTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SharedTagTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "SharedUnlikeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShipmentTrackingTool"
+      },
+      {
+        "subClassOf": "",
+        "label": "ShoppingTool"
+      },
+      {
+        "subClassOf": "",
+        "label": "SleepTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Blind"
+      },
+      {
+        "subClassOf": "",
+        "label": "SmartBracelet"
+      },
+      {
+        "subClassOf": "",
+        "label": "SmartCitySystem"
+      },
+      {
+        "subClassOf": "",
+        "label": "Door"
+      },
+      {
+        "subClassOf": "",
+        "label": "SmartEnvironmentService"
+      },
+      {
+        "subClassOf": "",
+        "label": "SmartEnvironmentSystem"
+      },
+      {
+        "subClassOf": "",
+        "label": "SmartWatch"
+      },
+      {
+        "subClassOf": "",
+        "label": "Window"
+      },
+      {
+        "subClassOf": "",
+        "label": "Smartphone"
+      },
+      {
+        "subClassOf": "",
+        "label": "SocialNetwork"
+      },
+      {
+        "subClassOf": "",
+        "label": "SpeakerPhoneActivatedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Sprinkler"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartActivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartAppAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartBrewingCoffeeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartBuyingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartCleaningAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartCookingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartDishwashingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartDryingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartEntertainmentAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartFocusingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartFocusingSessionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartListeningMusicAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartOvenCookingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartPlayingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartStudyingSessionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartSuperMarketBuyingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartUsingSmartphoneAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartVacuumAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartWashingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartWashingClothesAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartWatchingTvAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedActivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedAppTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedBikeSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedBrewingCoffeeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedCleaningTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedCookingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedDiswashingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedDryingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedEntertainementTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedFocusingSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedFocusingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedInteractionTrigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "StartedListeningMusicTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedOvenCookingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedPhysicalActivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedPlayingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedRelaxingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedRunSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedSleepingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedStudyingSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedUsingSmartphoneTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedVacuumTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedWalkingSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedWashingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartedWatchingTvTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StartingWashingClothesTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopActivityAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopAppAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopBrewingCoffeeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopCleaningAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopCookingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopDishwashingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopDryingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopEntertainmentAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopFocusingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopFocusingSessionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopListeningMusicAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopOvenCookingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopPlayingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopStudyingSessionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopUsingSmartphoneAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopVacuumAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopWashingAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopWashingClothesAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StopWatchingTvAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedActivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedAppTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedBikeSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedBrewingCoffeeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedCookingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedDiswashingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedDryingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedEntertainementTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedFocusingSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedFocusingTrigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "StoppedListeningMusicTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedOvenCookingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedPhysicalActivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedPlayingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedRelaxingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedRunSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedSleepingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedStudyingSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedUsingSmartphoneTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedWalkingSessionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedWashingClothesTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedWashingTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoppedWatchingTvTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoragePlatform"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoreAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredAppTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredBackupTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredContactTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredFileTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredHealthInformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredMediaInformationTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StoredWebBookmarkTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "StudyingTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "TVService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Tablet"
+      },
+      {
+        "subClassOf": "",
+        "label": "TagService"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakeAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakeAudioAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakePhotoAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakeVideoAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakenAudioTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakenImageTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakenTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "TakenVideoTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "TapButtonActivityTrigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "TemperatureSetToTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "TemporalTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "Thermostat"
+      },
+      {
+        "subClassOf": "",
+        "label": "TimeManagement"
+      },
+      {
+        "subClassOf": "",
+        "label": "TimeService"
+      },
+      {
+        "subClassOf": "",
+        "label": "TimeTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "TimerService"
+      },
+      {
+        "subClassOf": "",
+        "label": "ToDo"
+      },
+      {
+        "subClassOf": "",
+        "label": "ToggleCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "ToggleSwitchTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "TrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Trigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "TurnAlarmOffAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "TurnDeviceOffAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "TurnDeviceOnAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "TurnOffCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "TurnOffNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "TurnOnCommand"
+      },
+      {
+        "subClassOf": "",
+        "label": "TurnOnNotification"
+      },
+      {
+        "subClassOf": "",
+        "label": "TV"
+      },
+      {
+        "subClassOf": "",
+        "label": "UnhealthyActivityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "UnlikeService"
+      },
+      {
+        "subClassOf": "",
+        "label": "UpdatedWallpaperTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "UserConnectivityDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "UserConnectivityIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "UserDevice"
+      },
+      {
+        "subClassOf": "",
+        "label": "VacuumService"
+      },
+      {
+        "subClassOf": "",
+        "label": "VehicleTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "Ventilator"
+      },
+      {
+        "subClassOf": "",
+        "label": "VideoPlatform"
+      },
+      {
+        "subClassOf": "",
+        "label": "VideoRecordingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "VideoService"
+      },
+      {
+        "subClassOf": "",
+        "label": "VirtualObject"
+      },
+      {
+        "subClassOf": "",
+        "label": "VoiceAssistant"
+      },
+      {
+        "subClassOf": "",
+        "label": "VolumeDecreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "VolumeIncreasedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "VolumeService"
+      },
+      {
+        "subClassOf": "",
+        "label": "WalkTrackingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "WashingMachine"
+      },
+      {
+        "subClassOf": "",
+        "label": "WashingService"
+      },
+      {
+        "subClassOf": "",
+        "label": "WaterTemperatureSystemDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WaterTemperatureSystemEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WateringService"
+      },
+      {
+        "subClassOf": "",
+        "label": "WateringSystemDisabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WateringSystemEnabledTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WeatherService"
+      },
+      {
+        "subClassOf": "",
+        "label": "WeatherStation"
+      },
+      {
+        "subClassOf": "",
+        "label": "WeatherWebsite"
+      },
+      {
+        "subClassOf": "",
+        "label": "WebBookmarkService"
+      },
+      {
+        "subClassOf": "",
+        "label": "WebBookmarkTool"
+      },
+      {
+        "subClassOf": "",
+        "label": "WebRequestService"
+      },
+      {
+        "subClassOf": "",
+        "label": "WifiService"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "WindowFrameClosedTrigger"
+      },
+      {
+        "subClassOf": [
+          "",
+          ""
+        ],
+        "label": "WindowFrameOpenedTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorseConsumptionConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorseConsumptionConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorseDeviceConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorseDeviceConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorseFunctionalityTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorseUsabilityConditionAction"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorseUsabilityConditionTrigger"
+      },
+      {
+        "subClassOf": "",
+        "label": "WorsenedHealthyParameterTrigger"
+      }
+    ]
+  }
+}

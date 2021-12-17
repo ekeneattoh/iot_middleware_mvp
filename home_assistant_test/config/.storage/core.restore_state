@@ -1,0 +1,68 @@
+{
+    "version": 1,
+    "key": "core.restore_state",
+    "data": [
+        {
+            "state": {
+                "entity_id": "person.ekene_attoh",
+                "state": "unknown",
+                "attributes": {
+                    "editable": false,
+                    "id": "ekene_attoh",
+                    "user_id": "17c43d06b4364ce58b31c54bfb13ebd0",
+                    "friendly_name": "Ekene Attoh"
+                },
+                "last_changed": "2021-11-21T11:06:12.267394+00:00",
+                "last_updated": "2021-11-21T11:06:19.905247+00:00",
+                "context": {
+                    "id": "0849dc192283a84e63efa2f05b8b0fc7",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-11-21T11:10:35.798648+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.trigger_home_light_webhook",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-11-19T07:47:27.661424+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1636220900045",
+                    "friendly_name": "trigger_home_light_webhook"
+                },
+                "last_changed": "2021-11-21T11:06:14.953178+00:00",
+                "last_updated": "2021-11-21T11:06:14.953178+00:00",
+                "context": {
+                    "id": "ea19c24bc40e893f353f3e05d8bb058b",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-11-21T11:10:35.798648+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.translate_rule",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-11-07T16:02:00.050550+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1636293087430",
+                    "friendly_name": "trigger_office_light_webhook"
+                },
+                "last_changed": "2021-11-21T11:06:14.953543+00:00",
+                "last_updated": "2021-11-21T11:06:14.953543+00:00",
+                "context": {
+                    "id": "64224d7925bcc391011234d2a1cda71a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-11-21T11:10:35.798648+00:00"
+        }
+    ]
+}

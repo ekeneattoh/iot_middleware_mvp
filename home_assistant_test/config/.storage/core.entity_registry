@@ -1,0 +1,80 @@
+{
+    "version": 1,
+    "key": "core.entity_registry",
+    "data": {
+        "entities": [
+            {
+                "entity_id": "binary_sensor.updater",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "updater",
+                "platform": "updater",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "update",
+                "unit_of_measurement": null,
+                "original_name": "Updater",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "person.ekene_attoh",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "ekene_attoh",
+                "platform": "person",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Ekene Attoh",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "automation.trigger_home_light_webhook",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": "bedroom",
+                "unique_id": "1636220900045",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "trigger_home_light_webhook",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "automation.translate_rule",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1636293087430",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "trigger_office_light_webhook",
+                "original_icon": null,
+                "entity_category": null
+            }
+        ]
+    }
+}

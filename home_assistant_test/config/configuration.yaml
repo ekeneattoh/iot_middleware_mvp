@@ -1,0 +1,23 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+python_script:
+
+logger:
+  default: info
+rest_command:
+  led_simulator_home:
+    url: https://phd-iot-simulator.azurewebsites.net/api/smart_light_home?command=on
+    method: POST
+  led_simulator_work:
+    url: https://phd-iot-simulator.azurewebsites.net/api/smart_light_work?command=on
+    method: POST
