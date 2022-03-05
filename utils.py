@@ -4,6 +4,8 @@ import spacy
 import json
 from allennlp.predictors.predictor import Predictor
 
+allen_nlp_predictor = Predictor.from_path("decomposable-attention-elmo-2020.04.09.tar.gz")
+
 
 def read_yaml_file(filename: str) -> list:
     """
@@ -80,15 +82,56 @@ def write_to_json_file(filename: str, data: object):
         json.dump(data, f)
 
 
-def compute_allennlp_similarity(premise: str, hypothesis: str) -> dict:
-    predictor = Predictor.from_path("decomposable-attention-elmo-2020.04.09.tar.gz")
+def compute_allennlp_similarity(premise: str, hypothesis: str, predictor) -> dict:
     result = predictor.predict(
         premise=premise,
         hypothesis=hypothesis
     )
 
     return {
+        # likelihood in % that premise entails the hypothesis
+        # i.e input statement and hypothesis statement mean the same thing
         "entailment": result["label_probs"][0],
+        # likelihood in % that the input statement means something different from the
+        # hypothesis statement
         "contradiction": result["label_probs"][1],
+        # neutrality
         "neutral": result["label_probs"][2],
     }
+
+
+def compute_combined_similarity(dataset: list) -> list:
+    """
+    We will compute the ALLEN nlp of a dataset which has had its Spacy similarity computed already
+    We will then retun the ALLEN nlp result, the Spacy similarity as well as the average of both
+    similarities. The reasoning would be that items with the highest combined similarities
+    and low contradiction are indeed similar.
+
+    :param dataset: dataset containing a dictionary of hypotheses and premises
+    :return: ALLEN NLP similarity dict, spacy similarity and average of both similarities
+    """
+
+    result_list = []
+
+    for item in dataset:
+        result = {}
+
+        premise = item[list(item.keys())[0]]["ifttt_trigger_name"]
+        hypothesis = list(item.keys())[0]
+        spacy_similarity = (item[list(item.keys())[0]]["similarity"]) * 100
+
+        # compute the ALLEN nlp similarity
+        allen_nlp_similarity = compute_allennlp_similarity(premise=premise, hypothesis=hypothesis,
+                                                           predictor=allen_nlp_predictor)
+
+        result["ifttt_trigger_name"] = premise
+        result["eupont_hypothesis"] = hypothesis
+        result["spacy_similarity"] = spacy_similarity
+        result["allen_nlp_entailment"] = allen_nlp_similarity["entailment"] * 100
+        result["allen_nlp_contradiction"] = allen_nlp_similarity["contradiction"] * 100
+        result["allen_nlp_neutral"] = allen_nlp_similarity["neutral"] * 100
+        result["combined_similarity"] = (spacy_similarity + allen_nlp_similarity["entailment"] * 100) / 2
+
+        result_list.append(result)
+
+    return result_list
