@@ -60,7 +60,7 @@ def compute_spacy_word_similarity(doc1: str, word_list: list) -> dict:
         doc2 = nlp(trigger)
         # Similarity of two documents
         result[trigger] = {
-            "ifttt_trigger_name": doc1.text,
+            "ifttt_name": doc1.text,
             "similarity": doc1.similarity(doc2)
         }
 
@@ -116,7 +116,7 @@ def compute_combined_similarity(dataset: list) -> list:
     for item in dataset:
         result = {}
 
-        premise = item[list(item.keys())[0]]["ifttt_trigger_name"]
+        premise = item[list(item.keys())[0]]["ifttt_name"]
         hypothesis = list(item.keys())[0]
         spacy_similarity = (item[list(item.keys())[0]]["similarity"]) * 100
 
@@ -124,7 +124,7 @@ def compute_combined_similarity(dataset: list) -> list:
         allen_nlp_similarity = compute_allennlp_similarity(premise=premise, hypothesis=hypothesis,
                                                            predictor=allen_nlp_predictor)
 
-        result["ifttt_trigger_name"] = premise
+        result["ifttt_name"] = premise
         result["eupont_hypothesis"] = hypothesis
         result["spacy_similarity"] = spacy_similarity
         result["allen_nlp_entailment"] = allen_nlp_similarity["entailment"] * 100
@@ -135,3 +135,7 @@ def compute_combined_similarity(dataset: list) -> list:
         result_list.append(result)
 
     return result_list
+
+
+def sort_dict_by_value(unsorted_list: list, sort_key: str) -> list:
+    return (sorted(unsorted_list, key = lambda i: i[sort_key]))

@@ -21,3 +21,13 @@ rest_command:
   led_simulator_work:
     url: https://phd-iot-simulator.azurewebsites.net/api/smart_light_work?command=on
     method: POST
+
+
+sensor:
+  - platform: rest
+    resource: "https://phd-iot-simulator.azurewebsites.net/api/smart_thermostat?temp=50"
+    name: "Virtual Thermostat Simulator"
+
+  - platform: rest
+    resource: "https://phd-iot-simulator.azurewebsites.net/api/smart_ac?command=on"
+    name: "Virtual AC Simulator"
