@@ -53,28 +53,30 @@ def remove_special_characters(dataset: dict, dataset_key: str):
 
 # do some basic pre-processing and run spacy similarity on the datasets
 
-ifttt_test_triggers_dataset: list = populate_ifttt_datasets(filename="test_datasets/triggerList.json")
+if "__name__" == "__main__":
 
-ifttt_test_actions_dataset = populate_ifttt_datasets(filename="test_datasets/actionList.json")
+    ifttt_test_triggers_dataset: list = populate_ifttt_datasets(filename="test_datasets/triggerList.json")
 
-print("IFTTT TEST DATASET TRIGGERS: " + str(len(ifttt_test_triggers_dataset)))
+    ifttt_test_actions_dataset = populate_ifttt_datasets(filename="test_datasets/actionList.json")
 
-ifttt_test_triggers_dataset_clean = [remove_special_characters(dataset=x, dataset_key="triggerTitle") for x in
-                                     ifttt_test_triggers_dataset]
+    print("IFTTT TEST DATASET TRIGGERS: " + str(len(ifttt_test_triggers_dataset)))
 
-ifttt_processed_triggers = [
-    process_ifttt_rules(doc1=x["triggerTitle"], word_list=pre_processed_eupont_trigger_names,
-                        raw_results_subfolder_name="raw_triggers/",
-                        filtered_results_subfolder_name="filtered_triggers/")
-    for x in ifttt_test_triggers_dataset_clean[:100]]
+    ifttt_test_triggers_dataset_clean = [remove_special_characters(dataset=x, dataset_key="triggerTitle") for x in
+                                         ifttt_test_triggers_dataset]
 
-print("IFTTT TEST DATASET ACTIONS: " + str(len(ifttt_test_actions_dataset)))
+    ifttt_processed_triggers = [
+        process_ifttt_rules(doc1=x["triggerTitle"], word_list=pre_processed_eupont_trigger_names,
+                            raw_results_subfolder_name="raw_triggers/",
+                            filtered_results_subfolder_name="filtered_triggers/")
+        for x in ifttt_test_triggers_dataset_clean[:100]]
 
-ifttt_test_actions_dataset_clean = [remove_special_characters(dataset=x, dataset_key="actionTitle") for x in
-                                    ifttt_test_actions_dataset]
+    print("IFTTT TEST DATASET ACTIONS: " + str(len(ifttt_test_actions_dataset)))
 
-ifttt_processed_actions = [
-    process_ifttt_rules(doc1=x["actionTitle"], word_list=pre_processed_eupont_action_names,
-                        raw_results_subfolder_name="raw_actions/", filtered_results_subfolder_name="filtered_actions/")
-    for x in ifttt_test_actions_dataset_clean[:100]]
+    ifttt_test_actions_dataset_clean = [remove_special_characters(dataset=x, dataset_key="actionTitle") for x in
+                                        ifttt_test_actions_dataset]
+
+    ifttt_processed_actions = [
+        process_ifttt_rules(doc1=x["actionTitle"], word_list=pre_processed_eupont_action_names,
+                            raw_results_subfolder_name="raw_actions/", filtered_results_subfolder_name="filtered_actions/")
+        for x in ifttt_test_actions_dataset_clean[:100]]
 
