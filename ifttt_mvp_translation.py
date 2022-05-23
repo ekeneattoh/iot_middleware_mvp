@@ -35,13 +35,13 @@ mvp_ifttt_test_actions_dataset_clean = [remove_special_characters(dataset=x, dat
 mvp_ifttt_spacy_processed_triggers = [
     process_ifttt_rules(doc1=x["triggerTitle"], word_list=pre_processed_eupont_trigger_names,
                         raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_triggers/",
-                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_flitered_triggers/")
+                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_filtered_triggers/")
     for x in mvp_ifttt_test_triggers_dataset_clean]
 
 mvp_ifttt_spacy_processed_actions = [
     process_ifttt_rules(doc1=x["actionTitle"], word_list=pre_processed_eupont_action_names,
                         raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_actions/",
-                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_flitered_actions/")
+                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_filtered_actions/")
     for x in mvp_ifttt_test_actions_dataset_clean]
 
 ################ ALENNLP SIMILARITY
@@ -49,8 +49,6 @@ mvp_ifttt_spacy_processed_actions = [
 mvp_ifttt_allennlp_processed_triggers = [
     process_allen_similarity(premise=x["triggerTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
     mvp_ifttt_test_triggers_dataset_clean][0]
-
-print(mvp_ifttt_allennlp_processed_triggers)
 
 write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_triggers/mvp_result.json",
                    data=mvp_ifttt_allennlp_processed_triggers)

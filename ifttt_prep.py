@@ -30,13 +30,15 @@ def process_ifttt_rules(doc1: str, word_list: list, raw_results_subfolder_name: 
     filtered_data_filename = main_folder + filtered_results_subfolder_name + doc1 + "_ifttt_result.json"
 
     # write the result to a json file
-    if path.exists(raw_data_filename) or path.exists(filtered_data_filename):
+    if path.exists(raw_data_filename):
         print(raw_data_filename + " has already  been created!")
     else:
         # write the raw processed_data to file
         write_to_json_file(filename=raw_data_filename, data=result)
         print(raw_data_filename + " was just created!")
-
+    if path.exists(filtered_data_filename):
+        print(filtered_data_filename + " has already  been created!")
+    else:
         # write the filtered processed data to file, i.e remove data with similarity below a threshold
         write_to_json_file(filename=filtered_data_filename, data=filter_spacy_result(dataset=result, threshold=55))
         print(filtered_data_filename + " was just created!")
@@ -54,7 +56,6 @@ def remove_special_characters(dataset: dict, dataset_key: str):
 # do some basic pre-processing and run spacy similarity on the datasets
 
 if "__name__" == "__main__":
-
     ifttt_test_triggers_dataset: list = populate_ifttt_datasets(filename="test_datasets/triggerList.json")
 
     ifttt_test_actions_dataset = populate_ifttt_datasets(filename="test_datasets/actionList.json")
@@ -77,6 +78,6 @@ if "__name__" == "__main__":
 
     ifttt_processed_actions = [
         process_ifttt_rules(doc1=x["actionTitle"], word_list=pre_processed_eupont_action_names,
-                            raw_results_subfolder_name="raw_actions/", filtered_results_subfolder_name="filtered_actions/")
+                            raw_results_subfolder_name="raw_actions/",
+                            filtered_results_subfolder_name="filtered_actions/")
         for x in ifttt_test_actions_dataset_clean[:100]]
-
