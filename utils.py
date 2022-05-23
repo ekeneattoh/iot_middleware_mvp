@@ -56,10 +56,10 @@ def compute_spacy_word_similarity(doc1: str, word_list: list) -> dict:
 
     result = dict()
 
-    for trigger in word_list:
-        doc2 = nlp(trigger)
+    for word in word_list:
+        doc2 = nlp(word)
         # Similarity of two documents
-        result[trigger] = {
+        result[word] = {
             "ifttt_name": doc1.text,
             "similarity": doc1.similarity(doc2)
         }
@@ -82,7 +82,7 @@ def write_to_json_file(filename: str, data: object):
         json.dump(data, f)
 
 
-def compute_allennlp_similarity(premise: str, hypothesis: str, predictor) -> dict:
+def compute_allennlp_similarity(premise: str, hypothesis: str, predictor=allen_nlp_predictor) -> dict:
     result = predictor.predict(
         premise=premise,
         hypothesis=hypothesis
@@ -121,8 +121,7 @@ def compute_combined_similarity(dataset: list) -> list:
         spacy_similarity = (item[list(item.keys())[0]]["similarity"]) * 100
 
         # compute the ALLEN nlp similarity
-        allen_nlp_similarity = compute_allennlp_similarity(premise=premise, hypothesis=hypothesis,
-                                                           predictor=allen_nlp_predictor)
+        allen_nlp_similarity = compute_allennlp_similarity(premise=premise, hypothesis=hypothesis)
 
         result["ifttt_name"] = premise
         result["eupont_hypothesis"] = hypothesis

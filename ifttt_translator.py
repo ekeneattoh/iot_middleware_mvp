@@ -1,14 +1,30 @@
-from utils import write_to_json_file, compute_combined_similarity, sort_dict_by_value
+from utils import write_to_json_file, compute_combined_similarity, sort_dict_by_value, compute_allennlp_similarity
 import json
-
 
 def sort_by_allen_entailment(unsorted_list: list):
     # return in ascending order
     return list(reversed(sort_dict_by_value(unsorted_list=unsorted_list,
                                             sort_key="allen_nlp_entailment")))
 
-def process_combined_similarity(input_filename: str, result_filename: str):
 
+def process_allen_similarity(premise: str, hypothesis_list: list):
+    result = []
+
+    for word in hypothesis_list:
+        allennlp_result = compute_allennlp_similarity(premise=premise, hypothesis=word)
+        similarity_dict = {
+            "ifttt_name": premise,
+            "eupont_hypothesis": word,
+            "allen_nlp_entailment": allennlp_result["entailment"] * 100,
+            "allen_nlp_contradiction": allennlp_result["contradiction"] * 100,
+            "allen_nlp_neutral": allennlp_result["neutral"] * 100
+        }
+        result.append(similarity_dict)
+
+    return sort_by_allen_entailment(unsorted_list=result)
+
+
+def process_combined_similarity(input_filename: str, result_filename: str):
     trigger_dataset_file = open(file=input_filename)
     trigger_dataset = json.load(trigger_dataset_file)
 
