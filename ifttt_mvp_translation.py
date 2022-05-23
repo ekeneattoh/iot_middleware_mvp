@@ -35,13 +35,13 @@ mvp_ifttt_test_actions_dataset_clean = [remove_special_characters(dataset=x, dat
 mvp_ifttt_spacy_processed_triggers = [
     process_ifttt_rules(doc1=x["triggerTitle"], word_list=pre_processed_eupont_trigger_names,
                         raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_triggers/",
-                        filtered_results_subfolder_name="ifttt_mvp_flitered_triggers/")
+                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_flitered_triggers/")
     for x in mvp_ifttt_test_triggers_dataset_clean]
 
 mvp_ifttt_spacy_processed_actions = [
     process_ifttt_rules(doc1=x["actionTitle"], word_list=pre_processed_eupont_action_names,
                         raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_actions/",
-                        filtered_results_subfolder_name="ifttt_mvp_filtered_actions/")
+                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_flitered_actions/")
     for x in mvp_ifttt_test_actions_dataset_clean]
 
 ################ ALENNLP SIMILARITY
