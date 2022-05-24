@@ -9,7 +9,7 @@ from utils import write_to_json_file
 # import the full dataset and record key info about it
 
 full_recipe_list: list = populate_ifttt_datasets(filename="test_datasets/2017_05_mi_et_al_dataset/recipes.json")
-mvp_recipes_to_consider: int = 5
+mvp_recipes_to_consider: int = 30
 
 dataset_metadata: dict = {
     "total_recipes": len(full_recipe_list),
