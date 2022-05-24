@@ -1,6 +1,4 @@
-from utils import compute_spacy_word_similarity, write_to_json_file, filter_spacy_result
 import json
-from os import path
 
 eupont_data_file = open("eupont_processed.json")
 eupont_data = json.load(eupont_data_file)
@@ -17,26 +15,6 @@ def populate_ifttt_datasets(filename: str) -> list:
             dataset_list.append(json.loads(line))
 
     return dataset_list
-
-
-def process_ifttt_rules(doc1: str, word_list: list, raw_results_subfolder_name: str,
-                        filtered_results_subfolder_name: str):
-    main_folder = "processed_data/"
-
-    raw_data_filename = main_folder + raw_results_subfolder_name + doc1 + "_ifttt_result.json"
-
-    filtered_data_filename = main_folder + filtered_results_subfolder_name + doc1 + "_ifttt_result.json"
-
-    if path.exists(raw_data_filename) and path.exists(filtered_data_filename):
-        print(doc1 + " files have already been created!")
-    else:
-        result = compute_spacy_word_similarity(doc1=doc1, word_list=word_list)
-
-        write_to_json_file(filename=raw_data_filename, data=result)
-
-        write_to_json_file(filename=filtered_data_filename, data=filter_spacy_result(dataset=result, threshold=55))
-
-        print(doc1 + " files were just created!")
 
 
 def remove_special_characters(dataset: dict, dataset_key: str):

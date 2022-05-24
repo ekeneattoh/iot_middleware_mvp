@@ -1,6 +1,6 @@
-from ifttt_prep import populate_ifttt_datasets, remove_special_characters, process_ifttt_rules, \
-    pre_processed_eupont_trigger_names, pre_processed_eupont_action_names
-from ifttt_translator import process_combined_similarity, process_allen_similarity
+from ifttt_prep import populate_ifttt_datasets, remove_special_characters, pre_processed_eupont_trigger_names, \
+    pre_processed_eupont_action_names
+from ifttt_translator import process_combined_similarity, process_allen_similarity, process_ifttt_rules
 from os import listdir
 from utils import write_to_json_file
 

@@ -95,16 +95,15 @@ def write_to_json_file(filename: str, data: object):
 
 
 def compute_allennlp_similarity(premise: str, hypothesis: str, predictor=allen_nlp_predictor) -> dict:
-
     # keep track of the words you have seen
     already_seen = {}
 
     if premise not in already_seen.keys():
-        print("processing " + premise)
         already_seen[premise] = 1
+        print("processing " + premise)
     else:
-        print("skipping " + premise + " as it has already been processed")
         already_seen[premise] = already_seen[premise] + 1
+        print("skipping " + premise + " as it has already been processed")
 
     if already_seen[premise] == 1:
 
@@ -125,8 +124,6 @@ def compute_allennlp_similarity(premise: str, hypothesis: str, predictor=allen_n
         }
     else:
         return {}
-
-
 
 
 def compute_combined_similarity(dataset: list) -> list:
