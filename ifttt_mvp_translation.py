@@ -72,11 +72,13 @@ actions_filenames = listdir("processed_data/mvp_results/ifttt_mvp_spacy_filtered
 
 # process the combined similarities for the triggers and actions and store the results in a file
 for filename in triggers_filenames:
-    print("Processing " + filename)
-    process_combined_similarity(input_filename=TRIGGERS_INPUT_PATH + filename,
-                                result_filename=TRIGGERS_RESULT_PATH + filename)
+    if filename != ".DS_Store":
+        print("Processing " + filename)
+        process_combined_similarity(input_filename=TRIGGERS_INPUT_PATH + filename,
+                                    result_filename=TRIGGERS_RESULT_PATH + filename)
 
 for filename in actions_filenames:
-    print("Processing " + filename)
-    process_combined_similarity(input_filename=ACTIONS_INPUT_PATH + filename,
-                                result_filename=ACTIONS_RESULT_PATH + filename)
+    if filename != ".DS_Store":
+        print("Processing " + filename)
+        process_combined_similarity(input_filename=ACTIONS_INPUT_PATH + filename,
+                                    result_filename=ACTIONS_RESULT_PATH + filename)

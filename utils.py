@@ -53,7 +53,7 @@ def compute_spacy_word_similarity(doc1: str, word_list: list) -> dict:
     nlp = spacy.load("en_core_web_lg")
 
     # keep track of the words you have seen
-    already_seen = dict()
+    already_seen = {}
 
     doc1 = nlp(doc1)
 
@@ -66,7 +66,7 @@ def compute_spacy_word_similarity(doc1: str, word_list: list) -> dict:
 
     for word in word_list:
         # only do the similarity computation if you this is the first time you have seen the word
-        if already_seen[doc1.text] < 1:
+        if already_seen[doc1.text] == 1:
             doc2 = nlp(word)
             # Similarity of two documents
             result[word] = {
@@ -74,7 +74,7 @@ def compute_spacy_word_similarity(doc1: str, word_list: list) -> dict:
                 "similarity": doc1.similarity(doc2)
             }
         else:
-            pass
+            break
 
     # we will return the results with the highest similarity first (in descending order)
     return {k: v for k, v in sorted(result.items(), key=lambda item: item[1]["similarity"], reverse=True)}
@@ -95,21 +95,38 @@ def write_to_json_file(filename: str, data: object):
 
 
 def compute_allennlp_similarity(premise: str, hypothesis: str, predictor=allen_nlp_predictor) -> dict:
-    result = predictor.predict(
-        premise=premise,
-        hypothesis=hypothesis
-    )
 
-    return {
-        # likelihood in % that premise entails the hypothesis
-        # i.e input statement and hypothesis statement mean the same thing
-        "entailment": result["label_probs"][0],
-        # likelihood in % that the input statement means something different from the
-        # hypothesis statement
-        "contradiction": result["label_probs"][1],
-        # neutrality
-        "neutral": result["label_probs"][2],
-    }
+    # keep track of the words you have seen
+    already_seen = {}
+
+    if premise not in already_seen.keys():
+        print("processing " + premise)
+        already_seen[premise] = 1
+    else:
+        print("skipping " + premise + " as it has already been processed")
+        already_seen[premise] = already_seen[premise] + 1
+
+    if already_seen[premise] == 1:
+
+        result = predictor.predict(
+            premise=premise,
+            hypothesis=hypothesis
+        )
+
+        return {
+            # likelihood in % that premise entails the hypothesis
+            # i.e input statement and hypothesis statement mean the same thing
+            "entailment": result["label_probs"][0],
+            # likelihood in % that the input statement means something different from the
+            # hypothesis statement
+            "contradiction": result["label_probs"][1],
+            # neutrality
+            "neutral": result["label_probs"][2],
+        }
+    else:
+        return {}
+
+
 
 
 def compute_combined_similarity(dataset: list) -> list:

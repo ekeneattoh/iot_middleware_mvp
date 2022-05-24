@@ -19,6 +19,7 @@ def process_allen_similarity(premise: str, hypothesis_list: list):
             "allen_nlp_contradiction": allennlp_result["contradiction"] * 100,
             "allen_nlp_neutral": allennlp_result["neutral"] * 100
         }
+        print("adding result for " + word)
         result.append(similarity_dict)
 
     return sort_by_allen_entailment(unsorted_list=result)
