@@ -9,7 +9,7 @@ from utils import write_to_json_file
 # import the full dataset and record key info about it
 
 full_recipe_list: list = populate_ifttt_datasets(filename="test_datasets/2017_05_mi_et_al_dataset/recipes.json")
-mvp_recipes_to_consider: int = 30
+mvp_recipes_to_consider: int = 5
 
 dataset_metadata: dict = {
     "total_recipes": len(full_recipe_list),
@@ -48,14 +48,15 @@ mvp_ifttt_spacy_processed_actions = [
 # process result and save to file
 mvp_ifttt_allennlp_processed_triggers = [
     process_allen_similarity(premise=x["triggerTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
-    mvp_ifttt_test_triggers_dataset_clean][0]
+    mvp_ifttt_test_triggers_dataset_clean]
+
 
 write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_triggers/mvp_result.json",
                    data=mvp_ifttt_allennlp_processed_triggers)
 
 mvp_ifttt_allennlp_processed_actions = [
     process_allen_similarity(premise=x["actionTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
-    mvp_ifttt_test_actions_dataset_clean][0]
+    mvp_ifttt_test_actions_dataset_clean]
 
 write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_actions/mvp_result.json",
                    data=mvp_ifttt_allennlp_processed_actions)
