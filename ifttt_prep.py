@@ -28,7 +28,7 @@ def process_ifttt_rules(doc1: str, word_list: list, raw_results_subfolder_name: 
     filtered_data_filename = main_folder + filtered_results_subfolder_name + doc1 + "_ifttt_result.json"
 
     if path.exists(raw_data_filename) and path.exists(filtered_data_filename):
-        print(doc1 + " files have already  been created!")
+        print(doc1 + " files have already been created!")
     else:
         result = compute_spacy_word_similarity(doc1=doc1, word_list=word_list)
 
