@@ -52,17 +52,29 @@ def pre_process_word(word_list: list):
 def compute_spacy_word_similarity(doc1: str, word_list: list) -> dict:
     nlp = spacy.load("en_core_web_lg")
 
+    # keep track of the words you have seen
+    already_seen = dict()
+
     doc1 = nlp(doc1)
 
     result = dict()
 
+    if doc1.text not in already_seen.keys():
+        already_seen[doc1.text] = 1
+    else:
+        already_seen[doc1.text] = already_seen[doc1.text] + 1
+
     for word in word_list:
-        doc2 = nlp(word)
-        # Similarity of two documents
-        result[word] = {
-            "ifttt_name": doc1.text,
-            "similarity": doc1.similarity(doc2)
-        }
+        # only do the similarity computation if you this is the first time you have seen the word
+        if already_seen[doc1.text] < 1:
+            doc2 = nlp(word)
+            # Similarity of two documents
+            result[word] = {
+                "ifttt_name": doc1.text,
+                "similarity": doc1.similarity(doc2)
+            }
+        else:
+            pass
 
     # we will return the results with the highest similarity first (in descending order)
     return {k: v for k, v in sorted(result.items(), key=lambda item: item[1]["similarity"], reverse=True)}
@@ -137,4 +149,4 @@ def compute_combined_similarity(dataset: list) -> list:
 
 
 def sort_dict_by_value(unsorted_list: list, sort_key: str) -> list:
-    return (sorted(unsorted_list, key = lambda i: i[sort_key]))
+    return (sorted(unsorted_list, key=lambda i: i[sort_key]))
