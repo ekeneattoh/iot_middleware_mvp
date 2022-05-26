@@ -4,10 +4,10 @@ import json
 from os import path
 
 
-def sort_by_allen_entailment(unsorted_list: list):
+def sort_by_key(unsorted_list: list, key="combined_similarity"):
     # return in ascending order
     return list(reversed(sort_dict_by_value(unsorted_list=unsorted_list,
-                                            sort_key="allen_nlp_entailment")))
+                                            sort_key=key)))
 
 
 def process_allen_similarity(premise: str, hypothesis_list: list):
@@ -25,7 +25,7 @@ def process_allen_similarity(premise: str, hypothesis_list: list):
         print("adding result for " + word)
         result.append(similarity_dict)
 
-    return sort_by_allen_entailment(unsorted_list=result)
+    return sort_by_key(unsorted_list=result)
 
 
 def process_combined_similarity(input_filename: str, result_filename: str):
@@ -38,7 +38,7 @@ def process_combined_similarity(input_filename: str, result_filename: str):
         print(result_filename + " already exists")
     else:
         write_to_json_file(filename=result_filename,
-                           data=sort_by_allen_entailment(unsorted_list=trigger_similarity))
+                           data=sort_by_key(unsorted_list=trigger_similarity))
 
 
 def process_ifttt_rules(doc1: str, word_list: list, raw_results_subfolder_name: str,
@@ -75,7 +75,7 @@ if "__name__" == "__main__":
     high_temperature_combined_similarity = compute_combined_similarity(dataset=high_temperature_dataset)
 
     write_to_json_file(filename="processed_data/combined_similarity/high_temperature_combined.json",
-                       data=sort_by_allen_entailment(unsorted_list=high_temperature_combined_similarity))
+                       data=sort_by_key(unsorted_list=high_temperature_combined_similarity))
 
     # Motion Event
     # IFTTT Trigger Name: Motion detected (Motion Sensor)
@@ -85,7 +85,7 @@ if "__name__" == "__main__":
     motion_detected_combined_similarity = compute_combined_similarity(dataset=motion_detected_dataset)
 
     write_to_json_file(filename="processed_data/combined_similarity/motion_detected_combined.json",
-                       data=sort_by_allen_entailment(unsorted_list=motion_detected_combined_similarity))
+                       data=sort_by_key(unsorted_list=motion_detected_combined_similarity))
 
     # Time Event
     # IFTTT Trigger Name: Your Alarm goes off (Time Trigger)
@@ -95,7 +95,7 @@ if "__name__" == "__main__":
     alarm_goes_off_combined_similarity = compute_combined_similarity(dataset=alarm_goes_off_dataset)
 
     write_to_json_file(filename="processed_data/combined_similarity/alarm_goes_off_combined.json",
-                       data=sort_by_allen_entailment(unsorted_list=alarm_goes_off_combined_similarity))
+                       data=sort_by_key(unsorted_list=alarm_goes_off_combined_similarity))
 
     #############################################################################################
     # pick some Actions for testing purposes
@@ -107,7 +107,7 @@ if "__name__" == "__main__":
     set_temperature_combined_similarity = compute_combined_similarity(dataset=set_temperature_dataset)
 
     write_to_json_file(filename="processed_data/combined_similarity/set_temperature_action_combined.json",
-                       data=sort_by_allen_entailment(unsorted_list=set_temperature_combined_similarity))
+                       data=sort_by_key(unsorted_list=set_temperature_combined_similarity))
 
     # smart lock
     disarm_security_system_dataset_file = open("processed_data/filtered_actions/Disarm system_ifttt_result.json")
@@ -116,7 +116,7 @@ if "__name__" == "__main__":
     disarm_security_system_combined_similarity = compute_combined_similarity(dataset=disarm_security_system_dataset)
 
     write_to_json_file(filename="processed_data/combined_similarity/disarm_security_system_combined.json",
-                       data=sort_by_allen_entailment(unsorted_list=disarm_security_system_combined_similarity))
+                       data=sort_by_key(unsorted_list=disarm_security_system_combined_similarity))
 
     # smart switch
     turn_on_switch_dataset_file = open("processed_data/filtered_actions/Turn on switch_ifttt_result.json")
@@ -125,4 +125,4 @@ if "__name__" == "__main__":
     turn_on_switch_combined_similarity = compute_combined_similarity(dataset=turn_on_switch_dataset)
 
     write_to_json_file(filename="processed_data/combined_similarity/turn_on_switch_combined.json",
-                       data=sort_by_allen_entailment(unsorted_list=turn_on_switch_combined_similarity))
+                       data=sort_by_key(unsorted_list=turn_on_switch_combined_similarity))
