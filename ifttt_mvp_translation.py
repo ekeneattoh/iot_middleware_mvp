@@ -16,12 +16,12 @@ dataset_metadata: dict = {
     "total_recipes_considered": mvp_recipes_to_consider
 }
 
-# write_to_json_file(filename="processed_data/mvp_results/mvp_dataset_metadata.json", data=dataset_metadata)
+write_to_json_file(filename="processed_data/mvp_results/mvp_dataset_metadata.json", data=dataset_metadata)
 
 mvp_dataset: list = full_recipe_list[:mvp_recipes_to_consider]
 
 # save the dataset to file
-# write_to_json_file(filename="processed_data/mvp_results/mvp_dataset.json", data=mvp_dataset)
+write_to_json_file(filename="processed_data/mvp_results/mvp_dataset.json", data=mvp_dataset)
 
 # get and pre-process the triggers and actions
 mvp_ifttt_test_triggers_dataset_clean = [remove_special_characters(dataset=x, dataset_key="triggerTitle") for x in
@@ -32,34 +32,34 @@ mvp_ifttt_test_actions_dataset_clean = [remove_special_characters(dataset=x, dat
 
 ################ SPACY SIMILARITY
 # compute the spacy similarity and save the results to a document
-# mvp_ifttt_spacy_processed_triggers = [
-#     process_ifttt_rules(doc1=x["triggerTitle"], word_list=pre_processed_eupont_trigger_names,
-#                         raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_triggers/",
-#                         filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_filtered_triggers/")
-#     for x in mvp_ifttt_test_triggers_dataset_clean]
-#
-# mvp_ifttt_spacy_processed_actions = [
-#     process_ifttt_rules(doc1=x["actionTitle"], word_list=pre_processed_eupont_action_names,
-#                         raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_actions/",
-#                         filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_filtered_actions/")
-#     for x in mvp_ifttt_test_actions_dataset_clean]
+mvp_ifttt_spacy_processed_triggers = [
+    process_ifttt_rules(doc1=x["triggerTitle"], word_list=pre_processed_eupont_trigger_names,
+                        raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_triggers/",
+                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_filtered_triggers/")
+    for x in mvp_ifttt_test_triggers_dataset_clean]
+
+mvp_ifttt_spacy_processed_actions = [
+    process_ifttt_rules(doc1=x["actionTitle"], word_list=pre_processed_eupont_action_names,
+                        raw_results_subfolder_name="mvp_results/ifttt_mvp_raw_actions/",
+                        filtered_results_subfolder_name="mvp_results/ifttt_mvp_spacy_filtered_actions/")
+    for x in mvp_ifttt_test_actions_dataset_clean]
 
 ################ ALENNLP SIMILARITY
 # process result and save to file
-# mvp_ifttt_allennlp_processed_triggers = [
-#     process_allen_similarity(premise=x["triggerTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
-#     mvp_ifttt_test_triggers_dataset_clean]
-#
-#
-# write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_triggers/mvp_result.json",
-#                    data=mvp_ifttt_allennlp_processed_triggers)
-#
-# mvp_ifttt_allennlp_processed_actions = [
-#     process_allen_similarity(premise=x["actionTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
-#     mvp_ifttt_test_actions_dataset_clean]
-#
-# write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_actions/mvp_result.json",
-#                    data=mvp_ifttt_allennlp_processed_actions)
+mvp_ifttt_allennlp_processed_triggers = [
+    process_allen_similarity(premise=x["triggerTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
+    mvp_ifttt_test_triggers_dataset_clean]
+
+
+write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_triggers/mvp_result.json",
+                   data=mvp_ifttt_allennlp_processed_triggers)
+
+mvp_ifttt_allennlp_processed_actions = [
+    process_allen_similarity(premise=x["actionTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
+    mvp_ifttt_test_actions_dataset_clean]
+
+write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_actions/mvp_result.json",
+                   data=mvp_ifttt_allennlp_processed_actions)
 
 ################ COMBINED SIMILARITY
 TRIGGERS_INPUT_PATH = "processed_data/mvp_results/ifttt_mvp_spacy_filtered_triggers/"
