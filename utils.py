@@ -129,7 +129,7 @@ def compute_allennlp_similarity(premise: str, hypothesis: str, predictor=allen_n
 def compute_combined_similarity(dataset: list) -> list:
     """
     We will compute the ALLEN nlp of a dataset which has had its Spacy similarity computed already
-    We will then retun the ALLEN nlp result, the Spacy similarity as well as the average of both
+    We will then return the ALLEN nlp result, the Spacy similarity as well as the average of both
     similarities. The reasoning would be that items with the highest combined similarities
     and low contradiction are indeed similar.
 

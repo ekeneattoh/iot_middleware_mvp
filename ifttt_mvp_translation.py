@@ -55,7 +55,7 @@ write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filte
                    data=mvp_ifttt_allennlp_processed_triggers)
 
 mvp_ifttt_allennlp_processed_actions = [
-    process_allen_similarity(premise=x["actionTitle"], hypothesis_list=pre_processed_eupont_trigger_names) for x in
+    process_allen_similarity(premise=x["actionTitle"], hypothesis_list=pre_processed_eupont_action_names) for x in
     mvp_ifttt_test_actions_dataset_clean]
 
 write_to_json_file(filename="processed_data/mvp_results/ifttt_mvp_allennlp_filtered_actions/mvp_result.json",
