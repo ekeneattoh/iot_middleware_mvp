@@ -1,4 +1,4 @@
-import yaml
+# import yaml
 import regex as re
 import spacy
 import json
@@ -7,18 +7,18 @@ from allennlp.predictors.predictor import Predictor
 allen_nlp_predictor = Predictor.from_path("decomposable-attention-elmo-2020.04.09.tar.gz")
 
 
-def read_yaml_file(filename: str) -> list:
-    """
-
-    :param filename: yaml file you want to parse
-    :return: list
-    """
-
-    with open(filename, "r") as stream:
-        try:
-            return yaml.safe_load(stream)
-        except yaml.YAMLError as exc:
-            print(exc)
+# def read_yaml_file(filename: str) -> list:
+#     """
+#
+#     :param filename: yaml file you want to parse
+#     :return: list
+#     """
+#
+#     with open(filename, "r") as stream:
+#         try:
+#             return yaml.safe_load(stream)
+#         except yaml.YAMLError as exc:
+#             print(exc)
 
 
 def split_joined_words(joined_words_list: list):
