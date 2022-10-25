@@ -49,12 +49,14 @@ for key in ifttt_analysis["actions"].keys():
 ifttt_analysis["summary"] = {
     "triggers_summary": {
         "unique_triggers": unique_triggers,
-        "duplicate_triggers": duplicate_triggers
+        "duplicate_triggers": duplicate_triggers,
+        "total_triggers": len(ifttt_analysis["triggers"].keys())
     },
     "actions_summary": {
         "unique_actions": unique_actions,
-        "duplicate_actions": duplicate_actions
+        "duplicate_actions": duplicate_actions,
+        "total_actions": len(ifttt_analysis["actions"].keys())
     }
 }
 
-write_to_json_file(filename="processed_data/mvp_results/ifttt_analysis.json", data=ifttt_analysis)
+write_to_json_file(filename="processed_data/mvp_results2/ifttt_analysis.json", data=ifttt_analysis)
