@@ -22,7 +22,7 @@ from random import randint
 #
 # mvp_dataset: list = full_recipe_list[:mvp_recipes_to_consider]
 
-mvp_cluster_file = open("processed_data/mvp_results/ifttt_analysis.json")
+mvp_cluster_file = open("processed_data/mvp_results2/ifttt_analysis.json")
 mvp_cluster_data = json.load(mvp_cluster_file)
 
 
