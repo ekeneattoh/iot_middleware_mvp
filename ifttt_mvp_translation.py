@@ -18,11 +18,11 @@ from random import randint
 #     "total_recipes_considered": mvp_recipes_to_consider
 # }
 #
-# write_to_json_file(filename="processed_data/mvp_results2/mvp_dataset_metadata.json", data=dataset_metadata)
+# write_to_json_file(filename=" results/mvp_results2/mvp_dataset_metadata.json", data=dataset_metadata)
 #
 # mvp_dataset: list = full_recipe_list[:mvp_recipes_to_consider]
 
-mvp_cluster_file = open("processed_data/mvp_results2/ifttt_analysis.json")
+mvp_cluster_file = open(" results/mvp_results2/ifttt_analysis.json")
 mvp_cluster_data = json.load(mvp_cluster_file)
 
 
@@ -39,7 +39,7 @@ mvp_cluster_triggers_one: list = mvp_cluster_data["triggers"].keys()
 mvp_cluster_actions_one: list = mvp_cluster_data["actions"].keys()
 
 # save the dataset to file
-# write_to_json_file(filename="processed_data/mvp_results2/mvp_dataset.json", data=mvp_dataset)
+# write_to_json_file(filename=" results/mvp_results2/mvp_dataset.json", data=mvp_dataset)
 
 ################ SPACY SIMILARITY
 # compute the spacy similarity and save the results to a document
@@ -61,25 +61,25 @@ mvp_ifttt_allennlp_processed_triggers = [
     process_allen_similarity(premise=x, hypothesis_list=pre_processed_eupont_trigger_names) for x in
     mvp_cluster_triggers]
 
-write_to_json_file(filename="processed_data/mvp_results2/ifttt_mvp_allennlp_filtered_triggers/mvp_result.json",
+write_to_json_file(filename=" results/mvp_results2/ifttt_mvp_allennlp_filtered_triggers/mvp_result.json",
                    data=mvp_ifttt_allennlp_processed_triggers)
 
 mvp_ifttt_allennlp_processed_actions = [
     process_allen_similarity(premise=x, hypothesis_list=pre_processed_eupont_action_names) for x in
     mvp_cluster_actions]
 
-write_to_json_file(filename="processed_data/mvp_results2/ifttt_mvp_allennlp_filtered_actions/mvp_result.json",
+write_to_json_file(filename=" results/mvp_results2/ifttt_mvp_allennlp_filtered_actions/mvp_result.json",
                    data=mvp_ifttt_allennlp_processed_actions)
 
 ################ COMBINED SIMILARITY
-TRIGGERS_INPUT_PATH = "processed_data/mvp_results2/ifttt_mvp_spacy_filtered_triggers/"
-ACTIONS_INPUT_PATH = "processed_data/mvp_results2/ifttt_mvp_spacy_filtered_actions/"
+TRIGGERS_INPUT_PATH = " results/mvp_results2/ifttt_mvp_spacy_filtered_triggers/"
+ACTIONS_INPUT_PATH = " results/mvp_results2/ifttt_mvp_spacy_filtered_actions/"
 
-TRIGGERS_RESULT_PATH = "processed_data/mvp_results2/mvp_combined_similarity/triggers/"
-ACTIONS_RESULT_PATH = "processed_data/mvp_results2/mvp_combined_similarity/actions/"
+TRIGGERS_RESULT_PATH = " results/mvp_results2/mvp_combined_similarity/triggers/"
+ACTIONS_RESULT_PATH = " results/mvp_results2/mvp_combined_similarity/actions/"
 
-triggers_filenames = listdir("processed_data/mvp_results2/ifttt_mvp_spacy_filtered_triggers/")
-actions_filenames = listdir("processed_data/mvp_results2/ifttt_mvp_spacy_filtered_actions/")
+triggers_filenames = listdir(" results/mvp_results2/ifttt_mvp_spacy_filtered_triggers/")
+actions_filenames = listdir(" results/mvp_results2/ifttt_mvp_spacy_filtered_actions/")
 
 # process the combined similarities for the triggers and actions and store the results in a file
 for filename in triggers_filenames:
