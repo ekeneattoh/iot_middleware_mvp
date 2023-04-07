@@ -6,6 +6,8 @@ from utils import write_to_json_file
 import json
 from random import randint
 
+RESULTS_FOLDER = "mvp_results3"
+
 ################ DATASET PREP
 
 # import the full dataset and record key info about it
@@ -27,8 +29,6 @@ mvp_cluster_file = open("processed_data/" + RESULTS_FOLDER + "/ifttt_analysis.js
 # 45 actions
 
 mvp_cluster_data = json.load(mvp_cluster_file)
-
-RESULTS_FOLDER = "mvp_results3"
 
 random_start_zero = randint(0, 100)
 
