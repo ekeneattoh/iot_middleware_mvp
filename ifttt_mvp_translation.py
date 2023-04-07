@@ -22,7 +22,10 @@ from random import randint
 #
 # mvp_dataset: list = full_recipe_list[:mvp_recipes_to_consider]
 
-mvp_cluster_file = open("processed_data/" + RESULTS_FOLDER + "/ifttt_analysis.json")
+mvp_cluster_file = open("processed_data/" + RESULTS_FOLDER + "/ifttt_analysis.json") # consider only entries uses 1000 and above times
+# 44 triggers
+# 45 actions
+
 mvp_cluster_data = json.load(mvp_cluster_file)
 
 RESULTS_FOLDER = "mvp_results3"
