@@ -4,6 +4,9 @@ import spacy
 import json
 from allennlp.predictors.predictor import Predictor
 
+
+# https://storage.googleapis.com/allennlp-public-models/decomposable-attention-elmo-2020.04.09.tar.gz
+
 allen_nlp_predictor = Predictor.from_path("decomposable-attention-elmo-2020.04.09.tar.gz")
 
 
