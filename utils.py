@@ -6,6 +6,7 @@ from allennlp.predictors.predictor import Predictor
 
 
 # https://storage.googleapis.com/allennlp-public-models/decomposable-attention-elmo-2020.04.09.tar.gz
+# python -m spacy download en_core_web_lg
 
 allen_nlp_predictor = Predictor.from_path("decomposable-attention-elmo-2020.04.09.tar.gz")
 
